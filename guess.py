@@ -1,11 +1,24 @@
 import random
 
-start = input('請決定隨機數字範圍開始值: ')
-end = input('請決定隨機數字範圍結束值')
-start = int(start)
-end = int(end)
+print('模式1:手動: , 模式2:隨機: ')
+mode = input('請輸入模式: ')
+mode = int(mode)
+if mode == 1:
+	r = input('請輸入數字: ')
+	r = int(r)
+	ra = input('請輸入範圍: ')
+	ra = int(ra)
+	max = r + ra
+	min = r - ra
+elif mode == 2:	
+	start = input('請決定隨機數字範圍開始值: ')
+	end = input('請決定隨機數字範圍結束值')
+	start = int(start)
+	end = int(end)
+	r = random.randint(start, end)
+else:
+	print('不要亂輸入!!')
 
-r = random.randint(start, end)
 count = 0
 while True:
 	count = count + 1
